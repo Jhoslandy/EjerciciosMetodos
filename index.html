@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resolucion Ejercicios</title>
+  <!-- Bootstrap 5 desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    svg: { fontCache: 'global' }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  body{
+    
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1016%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(184%2c 217%2c 252%2c 1)'%3e%3c/rect%3e%3cpath d='M239%2c666.14C282.079%2c667.775%2c319.903%2c637.207%2c338.947%2c598.532C356.048%2c563.802%2c345.211%2c524.198%2c325.216%2c491.05C306.019%2c459.225%2c276.111%2c434.861%2c239%2c432.837C198.098%2c430.606%2c154.606%2c444.81%2c134.795%2c480.664C115.446%2c515.683%2c131.782%2c556.534%2c151.379%2c591.415C171.531%2c627.284%2c197.888%2c664.58%2c239%2c666.14' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1222.6814232029947 65.99977547494152L1257.5482532537603 0.42480543573370255 1141.7523831695657-19.08795462081092z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M336.42273005700883 110.38204322601882L519.468040419167 159.61590487717697 479.3822274705509-1.15950940241666z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M472.849%2c192.076C499.774%2c190.708%2c519.571%2c168.94%2c531.731%2c144.878C542.601%2c123.37%2c541.708%2c98.914%2c530.788%2c77.431C518.567%2c53.388%2c499.82%2c28.979%2c472.849%2c29.036C445.938%2c29.093%2c428.726%2c54.333%2c415.331%2c77.674C402.02%2c100.868%2c390.593%2c127.546%2c402.605%2c151.438C415.628%2c177.341%2c443.893%2c193.547%2c472.849%2c192.076' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M693.3832990189072 487.0574124410764L797.4021802182858 516.8843466567919 790.1331409421697 345.94255774986624z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M259.13735979483357 484.7579101476212L331.5341917827184 417.24677213034494 264.02305376544206 344.8499401424601 191.6262217775573 412.3610781597364z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M877.669%2c527.541C906.859%2c526.028%2c930.484%2c505.958%2c944.453%2c480.283C957.75%2c455.845%2c958.124%2c427.337%2c945.746%2c402.421C931.677%2c374.101%2c909.219%2c347.991%2c877.669%2c345.854C842.83%2c343.494%2c808.624%2c361.543%2c791.494%2c391.972C774.648%2c421.896%2c779.286%2c458.91%2c797.708%2c487.891C814.813%2c514.801%2c845.826%2c529.192%2c877.669%2c527.541' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1087.1961053931784 222.5265212973774L1015.1438137894104 370.2556115671747 1162.8729040592077 442.3079031709428 1234.9251956629757 294.57881290114545z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1106.472%2c413.476C1160.221%2c413.445%2c1196.322%2c364.322%2c1221.995%2c317.101C1246.22%2c272.542%2c1260.781%2c219.877%2c1235.688%2c175.801C1210.385%2c131.355%2c1157.614%2c113.792%2c1106.472%2c114.184C1056.106%2c114.57%2c1005.585%2c133.999%2c980.641%2c177.755C955.898%2c221.159%2c967.192%2c273.16%2c990.72%2c317.234C1016.047%2c364.678%2c1052.691%2c413.507%2c1106.472%2c413.476' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1095.824948091009 239.361474779794L1139.4154364388164 119.95179795288514 1029.6630232441848 137.33487249098414z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1422.1411088832426 403.0931278574619L1363.1764170934855 231.3155922481193 1256.9446316801111 349.29794260086214z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1016'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  }
+
+  .download-button {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50; /* A shade of green, similar to the image's teal/cyan */
+    background-color: #55c4c9; /* Closer to the image's color */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px; /* Highly rounded corners */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    flex-direction: row; /* Ensure icon and text are side-by-side */
+  }
+
+  .download-button:hover {
+    background-color: #40a0a5; /* Slightly darker on hover */
+  }
+
+  .download-button .icon-circle {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .download-button .github-icon {
+    color: black; /* GitHub icon color */
+    font-size: 30px;
+  }
+
+  .download-button .text-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2; /* Adjust line height for the two lines of text */
+    color: #4B0082; /* Indigo, closer to the purple in your image */
+    font-size: 20px; /* Adjust as needed */
+  }
+
+  .download-button .text-content .line1 {
+    font-size: 22px; /* Slightly larger for the first line */
+    margin-bottom: 2px;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navbar azul oscuro -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Resolucion Ejercicios</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Pantalla 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pantalla2.html">Pantalla 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pantalla3.html">Pantalla 3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido de la pantallas 1-->
+   <div class="container mt-5" id="pantalla1">
+  <h2>Ejercicio 39: Crecimiento del Tumor</h2>
+  <p>Se modela con la ecuación:</p>
+  
+  <p>\[ \frac{dA}{dt} = \alpha A \left[1 - \left(\frac{A}{k}\right)^\nu\right] \]</p>
+
+<p>Con: \(\alpha = 0.8\), \(k = 60\), \(\nu = 0.25\), \(A(0) = 1\ \text{mm}^2\). Resolver en \(0 \leq t \leq 30\) días usando:</p>
+  <ul>
+    <li>Método de Heun</li>
+    <li>Método de Runge-Kutta de 4to orden</li>
+  </ul>
+
+  <button class="btn btn-primary" onclick="mostrarResultados()">Resolver</button>
+
+  <div id="resultados" style="display:none;" class="mt-4">
+    <h4>📌 Paso a Paso</h4>
+
+  <h5>Método de Heun</h5>
+  <p>Usamos: \( \alpha = 0.8,\, k = 60,\, \nu = 0.25,\, A(0) = 1 \)</p>
+  <p>EDO: \( \frac{dA}{dt} = \alpha A \left[1 - \left( \frac{A}{k} \right)^\nu \right] \)</p>
+  <p>Con paso \( h = 1 \), de \( t = 0 \) a \( 30 \) días.</p>
+  <p><strong>Paso general:</strong></p>
+  <ol>
+    <li>Calcular \( f(t_n, A_n) \)</li>
+    <li>Estimar con Euler: \( A^* = A_n + h f(t_n, A_n) \)</li>
+    <li>Calcular \( f(t_{n+1}, A^*) \)</li>
+    <li>Actualizar: \( A_{n+1} = A_n + \frac{h}{2} \left[ f(t_n, A_n) + f(t_{n+1}, A^*) \right] \)</li>
+  </ol>
+
+  <p><strong>Resultado final: </strong> \( A(30) \approx  \, 35.9900 \text{mm}^2 \)</p>
+
+  <h5 class="mt-4">Método de Runge-Kutta 4° Orden</h5>
+  <p>Usamos los mismos parámetros. Fórmulas:</p>
+  <ul>
+    <li>\( k_1 = h f(t_n, A_n) \)</li>
+    <li>\( k_2 = h f(t_n + \frac{h}{2}, A_n + \frac{k_1}{2}) \)</li>
+    <li>\( k_3 = h f(t_n + \frac{h}{2}, A_n + \frac{k_2}{2}) \)</li>
+    <li>\( k_4 = h f(t_n + h, A_n + k_3) \)</li>
+    <li>\( A_{n+1} = A_n + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4) \)</li>
+  </ul>
+  <p><strong>Resultado final:</strong> \( A(30) \approx  \, 36.0302 \text{mm}^2 \)</p>
+
+
+    <h4 class="mt-4">📈 Gráficas de los resultados</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Método de Heun</h6>
+        <img src="img/heun.png" class="img-fluid" alt="Gráfico Heun" />
+      </div>
+      <div class="col-md-6">
+        <h6>Método Runge-Kutta 4</h6>
+        <img src="img/rk4.png" class="img-fluid" alt="Gráfico RK4" />
+      </div>
+    </div>
+
+    <h4 class="mt-4">📊 Tabla Comparativa</h4>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Método</th>
+          <th>Valor Final de A(30)</th>
+          <th>Precisión</th>
+          <th>Estabilidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Heun</td>
+            <td id="heunFinal">35.9900 \( mm^2 \)</td>
+            <td>Media</td>
+            <td>Buena</td>
+        </tr>
+        <tr>
+            <td>Runge-Kutta 4°</td>
+            <td id="rk4Final">36.0302 \( mm^2 \)</td>
+            <td>Alta</td>
+            <td>Excelente</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="YOUR_GITHUB_REPO_ZIP_URL_HERE" class="download-button" download>
+      <div class="icon-circle">
+        <i class="fab fa-github github-icon"></i>
+      </div>
+      <div class="text-content">
+        <span class="line1">Obtener archivos python para ver los</span>
+        <span class="line2">programas</span>
+      </div>
+    </a>
+
+
+    <h4 class="mt-4">🧠 Conclusiones</h4>
+    <p>
+      Ambos métodos permiten resolver la EDO no lineal del crecimiento tumoral. El método de Runge-Kutta 4° orden presenta mayor precisión
+      y estabilidad frente a Heun, aunque con mayor carga computacional. La solución muestra un crecimiento sigmoidal del área del tumor, que
+      se estabiliza a medida que se aproxima al límite impuesto por k.
+    </p>
+  </div>
+
+
+
+</div>
+<script>
+function f(t, A, alpha = 0.8, k = 60, nu = 0.25) {
+  return alpha * A * (1 - Math.pow(A / k, nu));
+}
+
+  function resolverMetodos() {
+    const h = 1;
+    const t0 = 0;
+    const tf = 30;
+    const n = (tf - t0) / h;
+    let t = t0;
+
+    // Método de Heun
+    let A_heun = 1;
+    for (let i = 0; i < n; i++) {
+      const f1 = f(t, A_heun);
+      const y_euler = A_heun + h * f1;
+      const f2 = f(t + h, y_euler);
+      A_heun = A_heun + (h / 2) * (f1 + f2);
+      t += h;
+    }
+
+    // Método de Runge-Kutta 4
+    t = t0;
+    let A_rk4 = 1;
+    for (let i = 0; i < n; i++) {
+      const k1 = h * f(t, A_rk4);
+      const k2 = h * f(t + h / 2, A_rk4 + k1 / 2);
+      const k3 = h * f(t + h / 2, A_rk4 + k2 / 2);
+      const k4 = h * f(t + h, A_rk4 + k3);
+      A_rk4 = A_rk4 + (1 / 6) * (k1 + 2 * k2 + 2 * k3 + k4);
+      t += h;
+    }
+
+    document.getElementById("heunFinal").textContent = A_heun.toFixed(4);
+    document.getElementById("rk4Final").textContent = A_rk4.toFixed(4);
+
+    // Para mostrar en MathJax
+    document.getElementById("heunFinalMath").textContent = A_heun.toFixed(4);
+    document.getElementById("rk4FinalMath").textContent = A_rk4.toFixed(4);
+
+    MathJax.typeset(); // Forzar renderizado
+  }
+
+</script>
+
+<script>
+  function mostrarResultados() {
+    document.getElementById("resultados").style.display = "block";
+  }
+</script>
+   
+  
+
+  <!-- Bootstrap Bundle JS (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

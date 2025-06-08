@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio Caída Libre</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <style>
+  body{
+    
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1016%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(184%2c 217%2c 252%2c 1)'%3e%3c/rect%3e%3cpath d='M239%2c666.14C282.079%2c667.775%2c319.903%2c637.207%2c338.947%2c598.532C356.048%2c563.802%2c345.211%2c524.198%2c325.216%2c491.05C306.019%2c459.225%2c276.111%2c434.861%2c239%2c432.837C198.098%2c430.606%2c154.606%2c444.81%2c134.795%2c480.664C115.446%2c515.683%2c131.782%2c556.534%2c151.379%2c591.415C171.531%2c627.284%2c197.888%2c664.58%2c239%2c666.14' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1222.6814232029947 65.99977547494152L1257.5482532537603 0.42480543573370255 1141.7523831695657-19.08795462081092z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M336.42273005700883 110.38204322601882L519.468040419167 159.61590487717697 479.3822274705509-1.15950940241666z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M472.849%2c192.076C499.774%2c190.708%2c519.571%2c168.94%2c531.731%2c144.878C542.601%2c123.37%2c541.708%2c98.914%2c530.788%2c77.431C518.567%2c53.388%2c499.82%2c28.979%2c472.849%2c29.036C445.938%2c29.093%2c428.726%2c54.333%2c415.331%2c77.674C402.02%2c100.868%2c390.593%2c127.546%2c402.605%2c151.438C415.628%2c177.341%2c443.893%2c193.547%2c472.849%2c192.076' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M693.3832990189072 487.0574124410764L797.4021802182858 516.8843466567919 790.1331409421697 345.94255774986624z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M259.13735979483357 484.7579101476212L331.5341917827184 417.24677213034494 264.02305376544206 344.8499401424601 191.6262217775573 412.3610781597364z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M877.669%2c527.541C906.859%2c526.028%2c930.484%2c505.958%2c944.453%2c480.283C957.75%2c455.845%2c958.124%2c427.337%2c945.746%2c402.421C931.677%2c374.101%2c909.219%2c347.991%2c877.669%2c345.854C842.83%2c343.494%2c808.624%2c361.543%2c791.494%2c391.972C774.648%2c421.896%2c779.286%2c458.91%2c797.708%2c487.891C814.813%2c514.801%2c845.826%2c529.192%2c877.669%2c527.541' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1087.1961053931784 222.5265212973774L1015.1438137894104 370.2556115671747 1162.8729040592077 442.3079031709428 1234.9251956629757 294.57881290114545z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1106.472%2c413.476C1160.221%2c413.445%2c1196.322%2c364.322%2c1221.995%2c317.101C1246.22%2c272.542%2c1260.781%2c219.877%2c1235.688%2c175.801C1210.385%2c131.355%2c1157.614%2c113.792%2c1106.472%2c114.184C1056.106%2c114.57%2c1005.585%2c133.999%2c980.641%2c177.755C955.898%2c221.159%2c967.192%2c273.16%2c990.72%2c317.234C1016.047%2c364.678%2c1052.691%2c413.507%2c1106.472%2c413.476' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1095.824948091009 239.361474779794L1139.4154364388164 119.95179795288514 1029.6630232441848 137.33487249098414z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1422.1411088832426 403.0931278574619L1363.1764170934855 231.3155922481193 1256.9446316801111 349.29794260086214z' fill='rgba(61%2c 120%2c 184%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1016'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  }
+
+  .download-button {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50; /* A shade of green, similar to the image's teal/cyan */
+    background-color: #55c4c9; /* Closer to the image's color */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px; /* Highly rounded corners */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    flex-direction: row; /* Ensure icon and text are side-by-side */
+  }
+
+  .download-button:hover {
+    background-color: #40a0a5; /* Slightly darker on hover */
+  }
+
+  .download-button .icon-circle {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .download-button .github-icon {
+    color: black; /* GitHub icon color */
+    font-size: 30px;
+  }
+
+  .download-button .text-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2; /* Adjust line height for the two lines of text */
+    color: #4B0082; /* Indigo, closer to the purple in your image */
+    font-size: 20px; /* Adjust as needed */
+  }
+
+  .download-button .text-content .line1 {
+    font-size: 22px; /* Slightly larger for the first line */
+    margin-bottom: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar azul oscuro -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Resolucion Ejercicios</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Pantalla 1</a></li>
+        <li class="nav-item"><a class="nav-link active" href="pantalla2.html">Pantalla 2</a></li>
+        <li class="nav-item"><a class="nav-link" href="pantalla3.html">Pantalla 3</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenido de la pantalla 2 -->
+<div class="container mt-5" id="pantalla2">
+  <h2>Ejercicio 40: Caída Libre con Resistencia Cuadrática</h2>
+  <p>La ecuación que modela el problema es:</p>
+  <p>\[ m \frac{dv}{dt} = -mg + kv^2 \]</p>
+  <p>Con: \( m = 5 \, \text{kg}, \, g = 9.81 \, \text{m/s}^2, \, k = 0.05 \, \text{kg/m}, \, v(0) = 0, \, 0 \le t \le 15 \, \text{s} \)</p>
+
+  <button class="btn btn-primary" onclick="resolver()">Resolver</button>
+
+  <div id="resultados" style="display:none;" class="mt-4">
+    <h4>📌 Paso a Paso</h4>
+
+    <h5>Método de Heun</h5>
+    <ol>
+      <li>Evaluar \( f(t, v) = \frac{-mg + kv^2}{m} \)</li>
+      <li>Calcular predicción de Euler: \( v^* = v_n + h \cdot f(t_n, v_n) \)</li>
+      <li>Evaluar \( f(t+h, v^*) \)</li>
+      <li>Actualizar: \( v_{n+1} = v_n + \frac{h}{2} \left[f(t_n, v_n) + f(t+h, v^*)\right] \)</li>
+    </ol>
+
+    <h5>Método de Runge-Kutta 4° Orden</h5>
+    <pre>
+k₁ = h·f(tₙ, vₙ)
+k₂ = h·f(tₙ + h/2, vₙ + k₁/2)
+k₃ = h·f(tₙ + h/2, vₙ + k₂/2)
+k₄ = h·f(tₙ + h, vₙ + k₃)
+vₙ₊₁ = vₙ + (1/6)(k₁ + 2k₂ + 2k₃ + k₄)
+    </pre>
+
+    <h4 class="mt-4">📈 Gráficas de los resultados</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Método de Heun</h6>
+        <img src="img/caida_heun.png" class="img-fluid" alt="Gráfico Heun">
+      </div>
+      <div class="col-md-6">
+        <h6>Método Runge-Kutta 4</h6>
+        <img src="img/caida_rk4.png" class="img-fluid" alt="Gráfico RK4">
+      </div>
+    </div>
+
+    <h4 class="mt-4">📊 Tabla Comparativa</h4>
+    <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Método</th>
+          <th>Velocidad Final v(15)</th>
+          <th>Precisión</th>
+          <th>Estabilidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Heun</td>
+          <td id="vHeun"></td>
+          <td>Media</td>
+          <td>Buena</td>
+        </tr>
+        <tr>
+          <td>Runge-Kutta 4°</td>
+          <td id="vRK4"></td>
+          <td>Alta</td>
+          <td>Excelente</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="YOUR_GITHUB_REPO_ZIP_URL_HERE" class="download-button" download>
+      <div class="icon-circle">
+        <i class="fab fa-github github-icon"></i>
+      </div>
+      <div class="text-content">
+        <span class="line1">Obtener archivos python para ver los</span>
+        <span class="line2">programas</span>
+      </div>
+    </a>
+
+    <h4 class="mt-4">🧠 Conclusiones</h4>
+    <p>
+      Ambos métodos permiten aproximar la solución a la EDO que describe el movimiento con resistencia cuadrática. Se observa una velocidad límite alcanzada debido a la fuerza resistiva proporcional a \( v^2 \).
+      <br>El método de Runge-Kutta 4° ofrece mayor precisión, ideal para problemas con alta no linealidad como este. Heun, aunque más simple, también brinda buenos resultados con menos esfuerzo computacional.
+    </p>
+  </div>
+</div>
+
+<script>
+function f(t, v, m = 5, g = 9.81, k = 0.05) {
+  return (-m * g + k * v * v) / m;
+}
+
+function resolver() {
+  const h = 1;
+  const t0 = 0;
+  const tf = 15;
+  const n = (tf - t0) / h;
+
+  // Heun
+  let v_heun = 0;
+  let t = t0;
+  for (let i = 0; i < n; i++) {
+    const v_pred = v_heun + h * f(t, v_heun);
+    v_heun += (h / 2) * (f(t, v_heun) + f(t + h, v_pred));
+    t += h;
+  }
+
+  // RK4
+  let v_rk4 = 0;
+  t = t0;
+  for (let i = 0; i < n; i++) {
+    const k1 = h * f(t, v_rk4);
+    const k2 = h * f(t + h / 2, v_rk4 + k1 / 2);
+    const k3 = h * f(t + h / 2, v_rk4 + k2 / 2);
+    const k4 = h * f(t + h, v_rk4 + k3);
+    v_rk4 += (1 / 6) * (k1 + 2 * k2 + 2 * k3 + k4);
+    t += h;
+  }
+
+  document.getElementById("vHeun").textContent = v_heun.toFixed(4) + " m/s";
+  document.getElementById("vRK4").textContent = v_rk4.toFixed(4) + " m/s";
+
+  document.getElementById("resultados").style.display = "block";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
