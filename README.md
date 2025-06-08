@@ -1,2 +1,2 @@
 # EjerciciosMetodos
-pagina donde se resuleven aplicando metodos numericos explicado
+Al descargar no olvides crear una carpeta "graficos" en la carpeta raiz donde guardes este archivo.py para que extraiga los graficos
