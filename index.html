@@ -240,12 +240,12 @@ function f(t, A, alpha = 0.8, k = 60, nu = 0.25) {
       t += h;
     }
 
-    document.getElementById("heunFinal").textContent = A_heun.toFixed(4);
-    document.getElementById("rk4Final").textContent = A_rk4.toFixed(4);
+    document.getElementById("").textContent = A_heun.toFixed(4);
+    document.getElementById("").textContent = A_rk4.toFixed(4);
 
     // Para mostrar en MathJax
-    document.getElementById("heunFinalMath").textContent = A_heun.toFixed(4);
-    document.getElementById("rk4FinalMath").textContent = A_rk4.toFixed(4);
+    document.getElementById("").textContent = A_heun.toFixed(4);
+    document.getElementById("").textContent = A_rk4.toFixed(4);
 
     MathJax.typeset(); // Forzar renderizado
   }
